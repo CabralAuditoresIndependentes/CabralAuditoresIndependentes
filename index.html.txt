@@ -1,0 +1,1921 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cabral Auditores Independentes | Contabilidade e Auditoria</title>
+
+    <meta name="description"
+          content="Cabral Auditores Independentes - Serviços de contabilidade, auditoria, perícia, consultoria contábil e tributária em Aracaju, Sergipe.">
+
+    <meta name="keywords"
+          content="contabilidade Aracaju, auditoria Aracaju, contador Sergipe, perícia contábil, consultoria tributária, Cabral Auditores">
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+        rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+
+        :root {
+            --primary: #0b1f3a;
+            --primary-light: #123b6d;
+            --secondary: #1769aa;
+            --gold: #c9a227;
+            --gold-light: #e5c766;
+            --light: #f5f7fa;
+            --dark: #101828;
+            --gray: #667085;
+            --white: #ffffff;
+            --border: #e4e7ec;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark);
+            background: #fff;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* =========================
+           NAVBAR
+        ========================== */
+
+        .navbar {
+            background: rgba(11, 31, 58, 0.97);
+            padding: 15px 0;
+            box-shadow: 0 3px 20px rgba(0,0,0,0.08);
+        }
+
+        .navbar-brand {
+            color: #fff !important;
+            font-weight: 800;
+            font-size: 1.25rem;
+            letter-spacing: .3px;
+        }
+
+        .navbar-brand span {
+            color: var(--gold-light);
+        }
+
+        .navbar-nav .nav-link {
+            color: rgba(255,255,255,.85);
+            font-weight: 500;
+            margin-left: 18px;
+            transition: .3s;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--gold-light);
+        }
+
+        .navbar-toggler {
+            border-color: rgba(255,255,255,.3);
+        }
+
+        .navbar-toggler-icon {
+            filter: brightness(0) invert(1);
+        }
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+            min-height: 720px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background:
+                linear-gradient(
+                    120deg,
+                    rgba(5, 21, 42, .98),
+                    rgba(11, 43, 79, .91)
+                ),
+                url('https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=2000&q=80')
+                center/cover;
+            color: #fff;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border: 1px solid rgba(255,255,255,.08);
+            border-radius: 50%;
+            right: -150px;
+            top: -150px;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border: 1px solid rgba(201,162,39,.15);
+            border-radius: 50%;
+            right: 80px;
+            bottom: -150px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            border-radius: 50px;
+            background: rgba(255,255,255,.09);
+            border: 1px solid rgba(255,255,255,.15);
+            color: var(--gold-light);
+            font-size: .85rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4.4rem);
+            line-height: 1.08;
+            font-weight: 800;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: var(--gold-light);
+        }
+
+        .hero p {
+            color: rgba(255,255,255,.78);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            max-width: 650px;
+            margin-bottom: 35px;
+        }
+
+        .btn-gold {
+            background: var(--gold);
+            border: 2px solid var(--gold);
+            color: #fff;
+            font-weight: 700;
+            padding: 13px 25px;
+            border-radius: 8px;
+            transition: .3s;
+        }
+
+        .btn-gold:hover {
+            background: var(--gold-light);
+            border-color: var(--gold-light);
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline-light-custom {
+            border: 2px solid rgba(255,255,255,.5);
+            color: #fff;
+            font-weight: 600;
+            padding: 13px 25px;
+            border-radius: 8px;
+            transition: .3s;
+        }
+
+        .btn-outline-light-custom:hover {
+            background: #fff;
+            color: var(--primary);
+        }
+
+        /* =========================
+           STATS
+        ========================== */
+
+        .stats {
+            margin-top: -55px;
+            position: relative;
+            z-index: 5;
+        }
+
+        .stat-card {
+            background: #fff;
+            padding: 30px 20px;
+            border-radius: 12px;
+            box-shadow: 0 12px 40px rgba(16,24,40,.10);
+            border: 1px solid var(--border);
+            text-align: center;
+            height: 100%;
+        }
+
+        .stat-card i {
+            font-size: 30px;
+            color: var(--gold);
+            margin-bottom: 12px;
+        }
+
+        .stat-card h3 {
+            font-size: 1.7rem;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .stat-card p {
+            margin: 0;
+            color: var(--gray);
+            font-size: .9rem;
+        }
+
+        /* =========================
+           SECTIONS
+        ========================== */
+
+        section {
+            padding: 100px 0;
+        }
+
+        .section-label {
+            display: inline-block;
+            color: var(--secondary);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: .78rem;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            color: var(--primary);
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 800;
+            margin-bottom: 18px;
+        }
+
+        .section-text {
+            color: var(--gray);
+            line-height: 1.8;
+        }
+
+        /* =========================
+           SERVICES
+        ========================== */
+
+        #servicos {
+            background: var(--light);
+        }
+
+        .service-card {
+            height: 100%;
+            padding: 35px 28px;
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            transition: .3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: "";
+            position: absolute;
+            height: 4px;
+            width: 0;
+            left: 0;
+            top: 0;
+            background: var(--gold);
+            transition: .3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 18px 45px rgba(16,24,40,.10);
+        }
+
+        .service-card:hover::before {
+            width: 100%;
+        }
+
+        .service-icon {
+            width: 62px;
+            height: 62px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(23,105,170,.08);
+            color: var(--secondary);
+            border-radius: 12px;
+            font-size: 28px;
+            margin-bottom: 22px;
+        }
+
+        .service-card h4 {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: var(--gray);
+            line-height: 1.7;
+            font-size: .93rem;
+        }
+
+        /* =========================
+           ABOUT
+        ========================== */
+
+        .about-box {
+            background: var(--primary);
+            color: #fff;
+            border-radius: 18px;
+            padding: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-box::after {
+            content: "";
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            border: 1px solid rgba(255,255,255,.08);
+            border-radius: 50%;
+            right: -100px;
+            bottom: -100px;
+        }
+
+        .about-box h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .about-box p {
+            color: rgba(255,255,255,.75);
+            line-height: 1.8;
+        }
+
+        .about-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 25px;
+        }
+
+        .about-list li {
+            margin-bottom: 13px;
+            color: rgba(255,255,255,.85);
+        }
+
+        .about-list i {
+            color: var(--gold-light);
+            margin-right: 8px;
+        }
+
+        /* =========================
+           INFO
+        ========================== */
+
+        #empresa {
+            background: #fff;
+        }
+
+        .info-card {
+            height: 100%;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 30px;
+            background: #fff;
+        }
+
+        .info-card-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .info-card-title i {
+            color: var(--gold);
+            font-size: 25px;
+        }
+
+        .info-card-title h4 {
+            margin: 0;
+            color: var(--primary);
+        }
+
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            padding: 12px 0;
+            border-bottom: 1px solid #eef0f3;
+            font-size: .9rem;
+        }
+
+        .info-row:last-child {
+            border-bottom: none;
+        }
+
+        .info-label {
+            color: var(--gray);
+        }
+
+        .info-value {
+            text-align: right;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        /* =========================
+           CNAES
+        ========================== */
+
+        #atividades {
+            background: var(--light);
+        }
+
+        .cnae-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 18px 20px;
+            height: 100%;
+            transition: .25s;
+        }
+
+        .cnae-card:hover {
+            border-color: var(--secondary);
+            box-shadow: 0 8px 25px rgba(16,24,40,.07);
+            transform: translateY(-3px);
+        }
+
+        .cnae-code {
+            color: var(--secondary);
+            font-weight: 800;
+            font-size: .88rem;
+            margin-bottom: 6px;
+        }
+
+        .cnae-name {
+            color: var(--dark);
+            font-size: .9rem;
+            line-height: 1.5;
+        }
+
+        .main-cnae {
+            border: 2px solid var(--gold);
+            position: relative;
+        }
+
+        .main-cnae::after {
+            content: "ATIVIDADE PRINCIPAL";
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: var(--gold);
+            color: #fff;
+            font-size: .6rem;
+            font-weight: 800;
+            padding: 4px 7px;
+            border-radius: 4px;
+        }
+
+        /* =========================
+           CONTACT
+        ========================== */
+
+        #contato {
+            background: var(--primary);
+            color: #fff;
+        }
+
+        #contato .section-title {
+            color: #fff;
+        }
+
+        #contato .section-text {
+            color: rgba(255,255,255,.7);
+        }
+
+        .contact-card {
+            height: 100%;
+            background: rgba(255,255,255,.06);
+            border: 1px solid rgba(255,255,255,.1);
+            border-radius: 14px;
+            padding: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .contact-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-icon {
+            min-width: 48px;
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            background: rgba(201,162,39,.13);
+            color: var(--gold-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 21px;
+        }
+
+        .contact-item h6 {
+            margin-bottom: 5px;
+            color: #fff;
+        }
+
+        .contact-item p,
+        .contact-item a {
+            color: rgba(255,255,255,.7);
+            margin: 0;
+            font-size: .9rem;
+        }
+
+        .contact-item a:hover {
+            color: var(--gold-light);
+        }
+
+        .map-wrapper {
+            border-radius: 14px;
+            overflow: hidden;
+            min-height: 400px;
+            height: 100%;
+        }
+
+        .map-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 400px;
+            border: 0;
+        }
+
+        /* =========================
+           WHATSAPP
+        ========================== */
+
+        .whatsapp-float {
+            position: fixed;
+            width: 58px;
+            height: 58px;
+            right: 22px;
+            bottom: 22px;
+            background: #25d366;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 29px;
+            box-shadow: 0 5px 25px rgba(0,0,0,.25);
+            z-index: 1000;
+            transition: .3s;
+        }
+
+        .whatsapp-float:hover {
+            color: #fff;
+            transform: scale(1.08);
+            background: #20b957;
+        }
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            background: #071426;
+            color: rgba(255,255,255,.65);
+            padding: 50px 0 25px;
+        }
+
+        footer h5 {
+            color: #fff;
+            margin-bottom: 18px;
+        }
+
+        footer p {
+            font-size: .88rem;
+            line-height: 1.7;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,.65);
+            transition: .2s;
+            font-size: .9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold-light);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,.08);
+            margin-top: 35px;
+            padding-top: 20px;
+            font-size: .8rem;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media (max-width: 991px) {
+
+            .navbar-nav .nav-link {
+                margin-left: 0;
+                padding: 10px 0;
+            }
+
+            .hero {
+                min-height: 650px;
+            }
+
+            .stats {
+                margin-top: 30px;
+            }
+
+            section {
+                padding: 75px 0;
+            }
+
+        }
+
+        @media (max-width: 767px) {
+
+            .hero {
+                min-height: 650px;
+                text-align: center;
+            }
+
+            .hero p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero .d-flex {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .about-box {
+                padding: 30px;
+            }
+
+            .info-row {
+                flex-direction: column;
+                gap: 3px;
+            }
+
+            .info-value {
+                text-align: left;
+            }
+
+            .map-wrapper,
+            .map-wrapper iframe {
+                min-height: 320px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- =====================================================
+     NAVBAR
+====================================================== -->
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="#inicio">
+            <i class="bi bi-bar-chart-line-fill me-2"></i>
+            Cabral <span>Auditores</span>
+        </a>
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#inicio">Início</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#servicos">Serviços</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#empresa">Empresa</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#atividades">Atividades</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contato">Contato</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- =====================================================
+     HERO
+====================================================== -->
+
+<header class="hero" id="inicio">
+
+    <div class="container hero-content">
+
+        <div class="row">
+
+            <div class="col-lg-9">
+
+                <div class="hero-badge">
+                    <i class="bi bi-patch-check-fill"></i>
+                    Cabral Auditores Independentes
+                </div>
+
+                <h1>
+                    Soluções contábeis para
+                    <span>decisões mais seguras.</span>
+                </h1>
+
+                <p>
+                    Contabilidade, auditoria, perícia e consultoria para
+                    empresas que buscam organização, transparência e
+                    segurança para crescer.
+                </p>
+
+                <div class="d-flex gap-3">
+
+                    <a href="#servicos" class="btn btn-gold">
+                        Conheça nossos serviços
+                        <i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+
+                    <a href="#contato" class="btn btn-outline-light-custom">
+                        Fale conosco
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     STATS
+====================================================== -->
+
+<div class="container stats">
+
+    <div class="row g-3">
+
+        <div class="col-6 col-lg-3">
+
+            <div class="stat-card">
+
+                <i class="bi bi-calendar-check"></i>
+
+                <h3>2009</h3>
+
+                <p>Ano de fundação</p>
+
+            </div>
+
+        </div>
+
+        <div class="col-6 col-lg-3">
+
+            <div class="stat-card">
+
+                <i class="bi bi-building"></i>
+
+                <h3>Ativa</h3>
+
+                <p>Situação cadastral</p>
+
+            </div>
+
+        </div>
+
+        <div class="col-6 col-lg-3">
+
+            <div class="stat-card">
+
+                <i class="bi bi-geo-alt"></i>
+
+                <h3>Aracaju</h3>
+
+                <p>Sergipe</p>
+
+            </div>
+
+        </div>
+
+        <div class="col-6 col-lg-3">
+
+            <div class="stat-card">
+
+                <i class="bi bi-shield-check"></i>
+
+                <h3>CRC SE</h3>
+
+                <p>SE-000301/O</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     SERVIÇOS
+====================================================== -->
+
+<section id="servicos">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <span class="section-label">
+                Nossas soluções
+            </span>
+
+            <h2 class="section-title">
+                Serviços especializados
+            </h2>
+
+            <p class="section-text mx-auto" style="max-width: 700px;">
+                Apoio profissional para empresas que precisam de
+                informações confiáveis, organização financeira e
+                segurança nas suas decisões.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-calculator"></i>
+                    </div>
+
+                    <h4>Contabilidade</h4>
+
+                    <p>
+                        Escrituração e acompanhamento contábil,
+                        organização das informações financeiras e
+                        suporte às necessidades da empresa.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-search"></i>
+                    </div>
+
+                    <h4>Auditoria</h4>
+
+                    <p>
+                        Análise independente de informações e
+                        procedimentos contábeis para proporcionar
+                        maior transparência e segurança.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-file-earmark-text"></i>
+                    </div>
+
+                    <h4>Perícia Contábil</h4>
+
+                    <p>
+                        Análises técnicas e elaboração de informações
+                        contábeis para auxiliar processos e tomadas
+                        de decisão.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-graph-up-arrow"></i>
+                    </div>
+
+                    <h4>Consultoria Contábil</h4>
+
+                    <p>
+                        Orientação especializada para melhorar
+                        processos, controles e utilização das
+                        informações contábeis.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-bank"></i>
+                    </div>
+
+                    <h4>Consultoria Tributária</h4>
+
+                    <p>
+                        Apoio na análise de questões tributárias,
+                        obrigações e informações fiscais relacionadas
+                        à atividade empresarial.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-briefcase"></i>
+                    </div>
+
+                    <h4>Apoio Empresarial</h4>
+
+                    <p>
+                        Serviços administrativos e suporte para
+                        empresas que desejam manter seus processos
+                        organizados e eficientes.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SOBRE
+====================================================== -->
+
+<section>
+
+    <div class="container">
+
+        <div class="about-box">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-7">
+
+                    <span class="section-label" style="color:#e5c766;">
+                        Sobre a empresa
+                    </span>
+
+                    <h3>
+                        Experiência, responsabilidade e
+                        compromisso profissional.
+                    </h3>
+
+                    <p>
+                        A Cabral Auditores Independentes, razão social
+                        Cabral Auditoria, Pericia e Contabilidade LTDA,
+                        atua no segmento contábil desde 14 de julho de
+                        2009, oferecendo serviços voltados à
+                        contabilidade, auditoria, perícia e consultoria.
+                    </p>
+
+                    <p>
+                        Localizada em Aracaju, Sergipe, a empresa mantém
+                        sua situação cadastral ativa e possui registro
+                        profissional no Conselho Regional de
+                        Contabilidade.
+                    </p>
+
+                    <ul class="about-list">
+
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            Atendimento profissional
+                        </li>
+
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            Informações contábeis organizadas
+                        </li>
+
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            Soluções para diferentes necessidades empresariais
+                        </li>
+
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            Compromisso com transparência e responsabilidade
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="col-lg-5 mt-4 mt-lg-0">
+
+                    <div class="text-center p-4">
+
+                        <i
+                            class="bi bi-buildings-fill"
+                            style="font-size:90px;color:#c9a227;">
+                        </i>
+
+                        <h4 class="mt-4">
+                            Cabral Auditores Independentes
+                        </h4>
+
+                        <p>
+                            Contabilidade • Auditoria • Perícia • Consultoria
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     DADOS DA EMPRESA
+====================================================== -->
+
+<section id="empresa">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <span class="section-label">
+                Informações empresariais
+            </span>
+
+            <h2 class="section-title">
+                Dados da empresa
+            </h2>
+
+        </div>
+
+
+        <div class="row g-4">
+
+            <!-- CADASTRO -->
+
+            <div class="col-lg-6">
+
+                <div class="info-card">
+
+                    <div class="info-card-title">
+
+                        <i class="bi bi-building-check"></i>
+
+                        <h4>Informações de Registro</h4>
+
+                    </div>
+
+                    <div class="info-row">
+                        <span class="info-label">CNPJ</span>
+                        <span class="info-value">
+                            10.960.636/0001-39
+                        </span>
+                    </div>
+
+                    <div class="info-row">
+                        <span class="info-label">Razão Social</span>
+                        <span class="info-value">
+                            Cabral Auditoria, Pericia e Contabilidade LTDA
+                        </span>
+                    </div>
+
+                    <div class="info-row">
+                        <span class="info-label">Nome Fantasia</span>
+                        <span class="info-value">
+                            Cabral Auditores Independentes
+                        </span>
+                    </div>
+
+                    <div class="info-row">
+                        <span class="info-label">Abertura</span>
+                        <span class="info-value">
+                            14/07/2009
+                        </span>
+                    </div>
+
+                    <div class="info-row">
+                        <span class="info-label">Porte</span>
+                        <span class="info-value">
+                            Micro Empresa
+                        </span>
+                    </div>
+
+                    <div class="info-row">
+                        <span class="info-label">Natureza Jurídica</span>
+                        <span class="info-value">
+                            Sociedade Empresária Limitada
+                        </span>
+                    </div>
+
+                    <div class="info-row">
+                        <span class="info-label">Situação</span>
+                        <span class="info-value text-success">
+                            <i class="bi bi-check-circle-fill"></i>
+                            Ativa
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- DADOS COMPLEMENTARES -->
+
+            <div class="col-lg-6">
+
+                <div class="info-card">
+
+                    <div class="info-card-title">
+
+                        <i class="bi bi-file-earmark-check"></i>
+
+                        <h4>Dados Complementares</h4>
+
+                    </div>
+
+                    <div class="info-row">
+                        <span class="info-label">Capital Social</span>
+                        <span class="info-value">
+                            R$ 20.000,00
+                        </span>
+                    </div>
+
+                    <div class="info-row">
+                        <span class="info-label">Tipo</span>
+                        <span class="info-value">
+                            Matriz
+                        </span>
+                    </div>
+
+                    <div class="info-row">
+                        <span class="info-label">Opção pelo MEI</span>
+                        <span class="info-value">
+                            Não
+                        </span>
+                    </div>
+
+                    <div class="info-row">
+                        <span class="info-label">Opção pelo Simples</span>
+                        <span class="info-value">
+                            Sim
+                        </span>
+                    </div>
+
+                    <div class="info-row">
+                        <span class="info-label">Data opção Simples</span>
+                        <span class="info-value">
+                            14/07/2009
+                        </span>
+                    </div>
+
+                    <div class="info-row">
+                        <span class="info-label">CRC</span>
+                        <span class="info-value">
+                            SE-000301/O
+                        </span>
+                    </div>
+
+                    <div class="info-row">
+                        <span class="info-label">Data Situação Cadastral</span>
+                        <span class="info-value">
+                            14/07/2009
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- SÓCIO -->
+
+        <div class="row mt-4">
+
+            <div class="col-12">
+
+                <div class="info-card">
+
+                    <div class="info-card-title">
+
+                        <i class="bi bi-person-badge"></i>
+
+                        <h4>Quadro de Sócios e Administradores</h4>
+
+                    </div>
+
+                    <div class="row align-items-center">
+
+                        <div class="col-md-2 text-center mb-3 mb-md-0">
+
+                            <div
+                                style="
+                                width:75px;
+                                height:75px;
+                                background:#eef5fb;
+                                color:#1769aa;
+                                border-radius:50%;
+                                display:flex;
+                                align-items:center;
+                                justify-content:center;
+                                margin:auto;
+                                font-size:32px;">
+                                <i class="bi bi-person-fill"></i>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-5">
+
+                            <small class="text-muted">
+                                Sócio-Administrador
+                            </small>
+
+                            <h5 class="mt-1 mb-0">
+                                Samuel Dosea Cabral
+                            </h5>
+
+                        </div>
+
+                        <div class="col-md-5">
+
+                            <small class="text-muted">
+                                Qualificação
+                            </small>
+
+                            <p class="fw-semibold mb-0">
+                                Sócio-Administrador
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CNAES
+====================================================== -->
+
+<section id="atividades">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <span class="section-label">
+                Atividades econômicas
+            </span>
+
+            <h2 class="section-title">
+                Atividades — CNAEs
+            </h2>
+
+            <p class="section-text mx-auto" style="max-width:700px;">
+                Confira as atividades econômicas associadas à empresa.
+            </p>
+
+        </div>
+
+
+        <div class="row g-3">
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="cnae-card main-cnae">
+
+                    <div class="cnae-code">
+                        69.20-6-01
+                    </div>
+
+                    <div class="cnae-name">
+                        Atividades de contabilidade
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+                <div class="cnae-card">
+                    <div class="cnae-code">82.11-3-00</div>
+                    <div class="cnae-name">
+                        Serviços combinados de escritório e apoio administrativo
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+                <div class="cnae-card">
+                    <div class="cnae-code">82.19-9-99</div>
+                    <div class="cnae-name">
+                        Preparação de documentos e serviços especializados de apoio administrativo
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+                <div class="cnae-card">
+                    <div class="cnae-code">62.09-1-00</div>
+                    <div class="cnae-name">
+                        Suporte técnico, manutenção e outros serviços em tecnologia da informação
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+                <div class="cnae-card">
+                    <div class="cnae-code">81.29-0-00</div>
+                    <div class="cnae-name">
+                        Atividades de limpeza não especificadas anteriormente
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+                <div class="cnae-card">
+                    <div class="cnae-code">68.22-6-00</div>
+                    <div class="cnae-name">
+                        Gestão e administração da propriedade imobiliária
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+                <div class="cnae-card">
+                    <div class="cnae-code">81.11-7-00</div>
+                    <div class="cnae-name">
+                        Serviços combinados para apoio a edifícios, exceto condomínios prediais
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+                <div class="cnae-card">
+                    <div class="cnae-code">82.91-1-00</div>
+                    <div class="cnae-name">
+                        Atividades de cobranças e informações cadastrais
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+                <div class="cnae-card">
+                    <div class="cnae-code">53.20-2-02</div>
+                    <div class="cnae-name">
+                        Serviços de entrega rápida
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+                <div class="cnae-card">
+                    <div class="cnae-code">82.20-2-00</div>
+                    <div class="cnae-name">
+                        Atividades de teleatendimento
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+                <div class="cnae-card">
+                    <div class="cnae-code">81.30-3-00</div>
+                    <div class="cnae-name">
+                        Atividades paisagísticas
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+                <div class="cnae-card">
+                    <div class="cnae-code">81.21-4-00</div>
+                    <div class="cnae-name">
+                        Limpeza em prédios e em domicílios
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+                <div class="cnae-card">
+                    <div class="cnae-code">69.20-6-02</div>
+                    <div class="cnae-name">
+                        Atividades de consultoria e auditoria contábil e tributária
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+                <div class="cnae-card">
+                    <div class="cnae-code">97.00-5-00</div>
+                    <div class="cnae-name">
+                        Serviços domésticos
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CONTATO
+====================================================== -->
+
+<section id="contato">
+
+    <div class="container">
+
+        <div class="row g-5">
+
+            <div class="col-lg-5">
+
+                <span class="section-label" style="color:#e5c766;">
+                    Entre em contato
+                </span>
+
+                <h2 class="section-title">
+                    Vamos conversar?
+                </h2>
+
+                <p class="section-text mb-5">
+                    Entre em contato com a Cabral Auditores
+                    Independentes para conhecer nossos serviços e
+                    encontrar a solução adequada para sua empresa.
+                </p>
+
+
+                <div class="contact-card">
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            <i class="bi bi-envelope"></i>
+                        </div>
+
+                        <div>
+
+                            <h6>E-mail</h6>
+
+                            <a href="mailto:nathalia@novadvocaci.site">
+                                nathalia@novadvocaci.site
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            <i class="bi bi-telephone"></i>
+                        </div>
+
+                        <div>
+
+                            <h6>Telefone</h6>
+
+                            <a href="tel:+557932147155">
+                                (79) 3214-7155
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            <i class="bi bi-whatsapp"></i>
+                        </div>
+
+                        <div>
+
+                            <h6>WhatsApp</h6>
+
+                            <a
+                                href="https://wa.me/5579998495100"
+                                target="_blank">
+                                (79) 99849-5100
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            <i class="bi bi-geo-alt"></i>
+                        </div>
+
+                        <div>
+
+                            <h6>Endereço</h6>
+
+                            <p>
+                                Rua Dep Antonio Torres, 481<br>
+                                Cirurgia — Aracaju/SE<br>
+                                CEP 49055-200
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-7">
+
+                <div class="map-wrapper">
+
+                    <iframe
+                        src="https://www.google.com/maps?q=Rua%20Dep%20Antonio%20Torres%20481%2C%20Cirurgia%2C%20Aracaju%2C%20SE&output=embed"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CTA
+====================================================== -->
+
+<section style="padding:70px 0;background:#f8f9fb;">
+
+    <div class="container">
+
+        <div
+            class="text-center"
+            style="
+            max-width:800px;
+            margin:auto;">
+
+            <i
+                class="bi bi-chat-square-text-fill"
+                style="
+                font-size:45px;
+                color:#c9a227;">
+            </i>
+
+            <h2 class="section-title mt-3">
+                Informação contábil gera decisões melhores.
+            </h2>
+
+            <p class="section-text mb-4">
+                Conte com uma estrutura profissional para apoiar
+                suas necessidades contábeis, de auditoria e consultoria.
+            </p>
+
+            <a href="#contato" class="btn btn-gold">
+                Fale com nossa equipe
+                <i class="bi bi-arrow-right ms-2"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-lg-5">
+
+                <h5>
+                    <i class="bi bi-bar-chart-line-fill me-2"></i>
+                    Cabral Auditores Independentes
+                </h5>
+
+                <p>
+                    Cabral Auditoria, Pericia e Contabilidade LTDA.
+                    Serviços de contabilidade, auditoria, perícia e
+                    consultoria.
+                </p>
+
+                <p>
+                    <strong>CNPJ:</strong>
+                    10.960.636/0001-39
+                </p>
+
+            </div>
+
+
+            <div class="col-6 col-lg-3">
+
+                <h5>Links</h5>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="#inicio">Início</a>
+                    </li>
+
+                    <li>
+                        <a href="#servicos">Serviços</a>
+                    </li>
+
+                    <li>
+                        <a href="#empresa">Empresa</a>
+                    </li>
+
+                    <li>
+                        <a href="#atividades">Atividades</a>
+                    </li>
+
+                    <li>
+                        <a href="#contato">Contato</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="col-6 col-lg-4">
+
+                <h5>Contato</h5>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <i class="bi bi-telephone me-2"></i>
+                        (79) 3214-7155
+                    </li>
+
+                    <li>
+                        <i class="bi bi-whatsapp me-2"></i>
+                        (79) 99849-5100
+                    </li>
+
+                    <li>
+                        <i class="bi bi-envelope me-2"></i>
+                        nathalia@novadvocaci.site
+                    </li>
+
+                    <li>
+                        <i class="bi bi-geo-alt me-2"></i>
+                        Aracaju — Sergipe
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom text-center">
+
+            <p class="mb-0">
+                © 2026 Cabral Auditores Independentes.
+                Todos os direitos reservados.
+            </p>
+
+            <p class="mb-0 mt-2">
+                Cabral Auditoria, Pericia e Contabilidade LTDA
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =====================================================
+     WHATSAPP FLUTUANTE
+====================================================== -->
+
+<a
+    href="https://wa.me/5579998495100"
+    target="_blank"
+    class="whatsapp-float"
+    aria-label="Falar pelo WhatsApp">
+
+    <i class="bi bi-whatsapp"></i>
+
+</a>
+
+
+<!-- Bootstrap JS -->
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<!-- =====================================================
+     SCRIPT
+====================================================== -->
+
+<script>
+
+    // Fecha o menu mobile depois de clicar em um link
+    document.querySelectorAll('.navbar-nav .nav-link').forEach(function(link) {
+
+        link.addEventListener('click', function() {
+
+            const menu = document.querySelector('.navbar-collapse');
+
+            if (menu.classList.contains('show')) {
+
+                new bootstrap.Collapse(menu).hide();
+
+            }
+
+        });
+
+    });
+
+
+    // Atualiza o ano automaticamente no footer, caso queira usar futuramente
+    // document.querySelector('.current-year').textContent = new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
